@@ -1,0 +1,14 @@
+{
+  "name": "user-task",
+  "version": "1.0.0",
+  "description": "Sample API with Get all tasks, get task based on id, and update the task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sathish",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
