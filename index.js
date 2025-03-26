@@ -1,11 +1,3 @@
-// Creating new api using express
-
-// id: Integer (auto-incremented or generated)
-// title: String
-// description: String
-// status: String (either &quot;pending&quot; or &quot;completed&quot;)
-
-
 const express = require('express');
 // const data = require('./data');
 const app = express();
@@ -70,6 +62,7 @@ app.post('/tasks', (req, res) => {
 // {    
 //     "title": "Updating third another Task",    
 //     "description": "Task Description"
+//     "status": "Completed"
 // }
 app.put('/tasks/:id', (req, res) => {    
     if (!req.body.title || req.body.title === '') {
@@ -85,7 +78,7 @@ app.put('/tasks/:id', (req, res) => {
     }
     task.title = req.body.title;
     task.description = req.body.description;
-    task.status = 'completed';
+    task.status = req.body.status || 'completed';
     res.json(task);
 });
 
